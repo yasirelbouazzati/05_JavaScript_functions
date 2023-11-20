@@ -2,12 +2,12 @@
 
 import isAdditionGreaterThanFifty from "./isAdditionGreaterThanFifty.js";
 
-const number1 = 30;
+const firstValue = 30;
 
-const number2 = 25;
+const secondValue = 25;
 
-const result = isAdditionGreaterThanFifty(number1, number2);
+const result = isAdditionGreaterThanFifty(firstValue, secondValue);
 
 console.log(
-  `is the addition of ${number1} and ${number2} big than or equals to 50? ${result} `,
+  `is the addition of ${firstValue} and ${secondValue} big than or equals to 50? ${result} `,
 );

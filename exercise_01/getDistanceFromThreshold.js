@@ -1,9 +1,9 @@
 /**
- * @param {number} value
- * @param {number} value_2
+ * @param {number} firstValue
+ * @param {number} secondValue
  * @returns {number}
  */
 
-export default function getDistanceFromThreshold(value, value_2) {
-  return value - value_2;
+export default function getDistanceFromThreshold(firstValue, secondValue) {
+  return firstValue - secondValue;
 }
