@@ -3,3 +3,12 @@
  * input: array (collection)
  * output: boolean
  */
+
+/**
+ * @param {array} collection
+ * @returns {boolean}
+ */
+
+export default function checkCollectionHasElements(collection) {
+  return collection.length > 0;
+}

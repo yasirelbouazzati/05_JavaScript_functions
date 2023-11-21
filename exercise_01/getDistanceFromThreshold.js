@@ -1,6 +1,9 @@
 /**
- * #1 :: Export JS function "getDistanceFromThreshold" to find how much a number exceeds or is left to reach one value
- * input: number (value)
- * input: number (threshold)
- * output: number
+ * @param {number} firstValue
+ * @param {number} secondValue
+ * @returns {number}
  */
+
+export default function getDistanceFromThreshold(firstValue, secondValue) {
+  return firstValue - secondValue;
+}
