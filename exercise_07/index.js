@@ -1,20 +1,35 @@
-//import isTypeOf' and execute
-
 import isTypeOf from "./isTypeOf.js";
 
-const stringValue = "hello";
-const numberValue = 42;
-const booleanValue = true;
-const arrayValue = [1, 2, 3];
+console.log(`Check a string: ${isTypeOf("Hi there", "string")}`);
 
-const resultString = isTypeOf(stringValue, false);
-console.log(`is ${stringValue} of type string? ${resultString}`);
+console.log(`Check a string if a number: ${isTypeOf("Hi there", "number")}`);
 
-const resultNumber = isTypeOf(numberValue, false);
-console.log(`is ${numberValue} of type number? ${resultNumber}`);
+console.log(`Check a string if a boolean: ${isTypeOf("Hi there", "boolean")}`);
 
-const resultBoolean = isTypeOf(booleanValue, false);
-console.log(`is ${booleanValue} of type boolean? ${resultBoolean}`);
+console.log(`Check a number if a boolean: ${isTypeOf(8, "boolean")}`);
 
-const resultArray = isTypeOf(stringValue, false);
-console.log(`is ${JSON.stringify(arrayValue)} of type array? ${resultArray}`);
+console.log(`Check a number if a number: ${isTypeOf(8, "number")}`);
+
+console.log(`Check a number if a string: ${isTypeOf(8, "string")}`);
+
+console.log(`Check a boolean if a boolean: ${isTypeOf(true, "boolean")}`);
+
+console.log(`Check a boolean if a number: ${isTypeOf(true, "number")}`);
+
+console.log(`Check a boolean if a string: ${isTypeOf(false, "string")}`);
+
+console.log(
+  `Check an array if a boolean: ${isTypeOf(["Apple", "Banana"], true)}`
+);
+
+console.log(
+  `Check an array if a number: ${isTypeOf(["Apple", "Banana"], "number")}`
+);
+
+console.log(
+  `Check an array if an array: ${isTypeOf(["Apple", "Banana"], Array.isArray)}`
+);
+
+console.log(
+  `Check an array if a string: ${isTypeOf(["Apple", "Banana"], "string")}`
+);
