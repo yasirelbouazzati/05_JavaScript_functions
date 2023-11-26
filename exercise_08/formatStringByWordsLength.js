@@ -23,9 +23,8 @@
  */
 
 function formatStringByWordsLength(sentence) {
-  const words = sentence.split(" "); // Split the sentence into words
+  const words = sentence.split(" ");
 
-  // Check the number of words and return the formatted string
   if (words.length > 5) {
     return sentence.toUpperCase();
   }

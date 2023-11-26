@@ -24,24 +24,21 @@
  */
 
 function transformCollectionToString(collection) {
-  // Check if the array has elements
   if (collection.length > 0) {
-    let resultString = ""; // Initialize the resulting string
+    let resultString = "";
 
-    // Iterate over the elements of the array
     for (let i = 0; i < collection.length; i++) {
-      resultString += collection[i]; // Concatenate the current element
+      resultString += collection[i];
 
-      // Add '|' if not the last element
       if (i < collection.length - 1) {
         resultString += " | ";
       }
     }
 
-    return resultString; // Return the resulting string
+    return resultString;
   }
 
-  return ""; // Return an empty string if the array is empty
+  return "";
 }
 
 export default transformCollectionToString;

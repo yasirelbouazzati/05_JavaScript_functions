@@ -26,16 +26,14 @@
  */
 
 function getDistanceMessageFromSumTo100(value) {
-  const random = Math.floor(Math.random() * 101); // Generate a random number between 0 and 100
+  const random = Math.floor(Math.random() * 101);
 
-  const sum = value + random; // Calculate the sum
+  const sum = value + random;
 
-  // Check if the sum exceeds 100 and return the corresponding message
   if (sum > 100) {
     return `Sum with value ${sum} exceeds in ${sum - 100} from number 100`;
   }
 
-  // If not, the sum does not exceed 100 and return the other message
   return `Sum with value ${sum} is left in ${100 - sum} from number 100`;
 }
 
