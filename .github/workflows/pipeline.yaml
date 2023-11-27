@@ -16,11 +16,13 @@ jobs:
       - name: Install node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 16
           cache: npm
       - name: Node version
         run: node --version
       - name: Install dependencies
         run: npm install
+      - name: Grant execute permission to prettier
+        run: chmod +x node_modules/.bin/prettier
       - name: Lint code
-        run: npm run lint
+        run: npm run lint:fix
