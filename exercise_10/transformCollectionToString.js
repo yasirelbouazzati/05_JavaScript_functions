@@ -25,17 +25,7 @@
 
 function transformCollectionToString(collection) {
   if (collection.length > 0) {
-    let resultString = "";
-
-    for (let i = 0; i < collection.length; i++) {
-      resultString += collection[i];
-
-      if (i < collection.length - 1) {
-        resultString += " | ";
-      }
-    }
-
-    return resultString;
+    return collection.join(" | ");
   }
 
   return "";

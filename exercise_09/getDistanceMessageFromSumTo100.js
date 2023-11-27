@@ -25,16 +25,31 @@
  * @returns {string}
  */
 
-function getDistanceMessageFromSumTo100(value) {
-  const random = Math.floor(Math.random() * 101);
+import generateRandomNumberInRange from "../exercise_03/generateRandomNumberInRange.js";
 
-  const sum = value + random;
+import getDistanceFromThreshold from "../exercise_01/getDistanceFromThreshold.js";
 
-  if (sum > 100) {
-    return `Sum with value ${sum} exceeds in ${sum - 100} from number 100`;
+import isGreaterThan from "../exercise_04/isGreaterThan.js";
+
+const getDistanceMessageFromSumTo100 = function (value) {
+  const roundedRandomNumber = generateRandomNumberInRange(100) + value;
+  let diference = getDistanceFromThreshold(100, roundedRandomNumber);
+  let mesage =
+    "Sum with value " +
+    roundedRandomNumber +
+    " isd left in " +
+    diference +
+    " from number 100";
+  if (isGreaterThan(roundedRandomNumber, 100)) {
+    diference = getDistanceFromThreshold(roundedRandomNumber, 100);
+    mesage =
+      "Sum with value " +
+      roundedRandomNumber +
+      " exceeds in " +
+      diference +
+      " from number 100";
   }
-
-  return `Sum with value ${sum} is left in ${100 - sum} from number 100`;
-}
+  return mesage;
+};
 
 export default getDistanceMessageFromSumTo100;

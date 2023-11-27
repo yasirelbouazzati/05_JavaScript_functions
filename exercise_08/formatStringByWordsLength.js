@@ -21,15 +21,12 @@
  * @param {string} sentence
  * @returns {string}
  */
+import getTotalWordsFromString from "../exercise_02/getTotalWordsFromString.js";
 
-function formatStringByWordsLength(sentence) {
-  const words = sentence.split(" ");
+const formatStringByWordsLength = function (sentence) {
+  const Words = getTotalWordsFromString(sentence);
 
-  if (words.length > 5) {
-    return sentence.toUpperCase();
-  }
-
-  return sentence.toLowerCase();
-}
+  return Words > 5 ? sentence.toUpperCase() : sentence.toLowerCase();
+};
 
 export default formatStringByWordsLength;
