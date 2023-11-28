@@ -19,17 +19,17 @@ console.log(`Check a boolean if a number: ${isTypeOf(true, "number")}`);
 console.log(`Check a boolean if a string: ${isTypeOf(false, "string")}`);
 
 console.log(
-  `Check an array if a boolean: ${isTypeOf(["Apple", "Banana"], true)}`,
+  `Check an array if a boolean: ${isTypeOf(["Apple", "Banana"], true)}`
 );
 
 console.log(
-  `Check an array if a number: ${isTypeOf(["Apple", "Banana"], "number")}`,
+  `Check an array if a number: ${isTypeOf(["Apple", "Banana"], "number")}`
 );
 
 console.log(
-  `Check an array if an array: ${isTypeOf(["Apple", "Banana"], Array.isArray)}`,
+  `Check an array if an array: ${isTypeOf(["Apple", "Banana"], Array.isArray)}`
 );
 
 console.log(
-  `Check an array if a string: ${isTypeOf(["Apple", "Banana"], "string")}`,
+  `Check an array if a string: ${isTypeOf(["Apple", "Banana"], "string")}`
 );
